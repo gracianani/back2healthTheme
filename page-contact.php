@@ -58,7 +58,7 @@ Template Name: Contact
 	<form method="post" class="peThemeContactForm" >
 		
 		<?php if ($contact->quote == "yes"): ?>
-		<div id="contactType" class="bay form-horizontal">
+		<div id="contactType" class="bay form-horizontal" >
 			<?php echo $contact->quoteSelectBox; ?>
 			
 			<div class="control-group">
@@ -111,28 +111,12 @@ Template Name: Contact
 				</div>
 				
 				
-				<!--website field-->
-				<div class="control-group">
-					<label for="inputName" class="control-label"><?php e__pe("Website"); ?></label>
-					<div class="controls">
-						<input name="website" type="text" id="inputWebsite" class="span9">
-						<span class="help-inline"></span>
-					</div>
-				</div>
 		</div>
 		
 		<?php if ($contact->quote == "yes"): ?>
 		<div id="project" class="bay form-horizontal">
 			<?php echo $contact->quoteBox; ?>
-			
-			<!--website field-->
-			<div class="control-group">
-				<label for="inputProject" class="control-label">Project Name</label>
-				<div class="controls">
-					<input name="project" type="text" id="inputProject" class="span9">
-					<span class="help-inline"></span>
-				</div>
-			</div>
+		
 			
 			<!--website field-->
 			<div class="control-group">
@@ -147,22 +131,35 @@ Template Name: Contact
 				</div>
 			</div>
 			
+
+			
 			<div class="control-group">
-				<label for="#" class="control-label">Project Budget</label>
+				<label for="inputTime" class="control-label">Desired Time</label>
 				<div class="controls">
-					<?php $checked = "checked"; ?>
-					<?php foreach ($contact->budgets as $budget): ?>
-					<label class="radio"><input type="radio" name="budget" <?php echo $checked; ?> value="<?php echo esc_attr($budget); ?>" /><?php echo $budget; ?></label>
-					<?php $checked = "";  ?>
-					<?php endforeach; ?>
+					<input name="desiredTime" type="text" id="inputTime" class="span9">
 					<span class="help-inline"></span>
 				</div>
 			</div>
 			
 			<div class="control-group">
-				<label for="inputTime" class="control-label">Time Frame</label>
+				<label for="#" class="control-label">Time of Day</label>
 				<div class="controls">
-					<input name="timeframe" type="text" id="inputTime" class="span9">
+					<?php $checked = "checked"; ?>
+					<?php foreach ($contact->timeofday as $timeofday): ?>
+					<label class="radio"><input type="radio" name="timeofday" <?php echo $checked; ?> value="<?php echo esc_attr($timeofday); ?>" /><?php echo $timeofday; ?></label>
+					<?php $checked = "";  ?>
+					<?php endforeach; ?>
+					<span class="help-inline"></span>
+				</div>
+			</div>
+			<div class="control-group">
+				<label for="#" class="control-label">Seen here before?</label>
+				<div class="controls">
+					<?php $checked = "checked"; ?>
+					<?php foreach ($contact->haveseenbefore as $haveseenbefore): ?>
+					<label class="radio"><input type="radio" name="haveseenbefore" <?php echo $checked; ?> value="<?php echo esc_attr($haveseenbefore); ?>" /><?php echo $haveseenbefore; ?></label>
+					<?php $checked = "";  ?>
+					<?php endforeach; ?>
 					<span class="help-inline"></span>
 				</div>
 			</div>

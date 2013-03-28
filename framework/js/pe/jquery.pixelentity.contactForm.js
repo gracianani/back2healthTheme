@@ -13,7 +13,9 @@
 	var ajaxurl = window.peContactForm ? decodeURIComponent(window.peContactForm.url) : false;
 	var validateRegexps = {
 			"email": /^[a-zA-Z0-9._\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,4}$/,
-			"default": /.{4}/ 
+			"timeofday":/am|pm/,
+			"time":/^(1[0-2]|\d)$/,
+			"default": /.{2}/ 
 		};
 	
 	function PeThemeContactForm(target, conf) {
@@ -38,12 +40,19 @@
 			if (el.attr("type") == "submit") {
 				return;
 			}
+			if (el.attr("name")=="timeofday") {
+				el.attr("data-validation","timeofday");
+			}
+			if (el.attr("name")=="desiredTime") {
+				el.attr("data-validation","time");
+			}
 			fields.push(el);
 			el.attr("data-fieldID",fields.length-1);
 		}
 		
 		function inlineValidation() {
 			validate(fields[this.getAttribute("data-fieldID")]);
+			console.log('here');
 			return true;
 		}
 		

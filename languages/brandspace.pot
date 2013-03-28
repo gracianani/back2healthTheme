@@ -4212,11 +4212,11 @@ msgid   "Add one or more service option."
 msgstr  ""
 
 #: theme/php/PeTheme/PeThemeBrandspace.php:1035
-msgid   "Budget Options"
+msgid   "Time of Day"
 msgstr  ""
 
 #: theme/php/PeTheme/PeThemeBrandspace.php:1037
-msgid   "Add one or more budget option."
+msgid   "Add one or more time option."
 msgstr  ""
 
 #: theme/php/PeTheme/PeThemeBrandspace.php:1049

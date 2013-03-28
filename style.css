@@ -126,6 +126,19 @@ Tags: photoblogging
     }
     
     /*custom style*/
+    body,p {
+	    font-family:"Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
+    }
+    h1, h2, h3, h4, h5, h6 {
+	    font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif!important;
+	    font-weight: normal;
+    }
+    .stat-sidebar h3,.lower h3 {
+	    font-weight: normal;
+    }
+    header {
+	    overflow: visible;
+    }
     #navigation {
 	    margin-top: 30px;
     }
@@ -134,21 +147,189 @@ Tags: photoblogging
 	    display: inline-block;
 	    min-width: 7%;
 	    text-align: center;
-	    padding-right: 1%;
-	    padding-left:1%;
+	    padding-right: 2%;
 	    position: relative;
+	    height: 30px;
     }
     #navigation>.menu-item>a {
 	    font-weight: normal;
+	    color:#616161;
+    }
+    #navigation>.current-menu-item>a {
+	    color: #36a6d8;
+    }
+    #navigation>.menu-item.open>a {
+	    color: #36a6d8;
     }
     .subMenu {
     	position: absolute;
 	    left:0;
-	    top:0;
+	    top:25px;
+	    margin-top: 0;
+	    padding-top: 4px;
+	    width:150px;
+	    text-align: left;
+	    background: url(img/topcaret.png) no-repeat 10px top;
+	    z-index: 99;
+	    display: none;
+    }
+    .subMenu>li {
+	    font-size: 12px;
+	    border-bottom: 1px solid #FFF;
+	    background-color:#36a6d8;
+    }
+    .subMenu>li>a {
+	    color: #FFF;
+	    display: block;
+	    padding:10px 10px;
+    }
+    .subMenu>li>a:hover {
+	    background-color: #000;
     }
     .header-content {
 	    border-bottom: none;
+	    padding-bottom: 15px;
     }
     .logo {
 	    border-right: none;
+    }
+    .logo-foot {
+	    width:50%;
+	    height: auto;
+    }
+    #home-slide-auto {
+	    padding:20px 30px 0 15px;
+    }
+    #home-slide-auto h1{
+	    font-size: 48px;
+	    font-weight:500;
+	    color: #111;
+    }
+    #home-slide-auto p {
+	    font-size: 16px;
+	    color:#999;
+	    line-height: 2em;
+    }
+    #home-contact {
+	    background-color: #f9f9f9;
+	    position: relative;
+    }
+    #home-contact>.container {
+	    position: relative;
+    }
+    #home-contact-img {
+	    position: absolute;
+	    right: 0;
+	    bottom:0;
+	    width: 449px;
+	    height: 297px;
+	    background: url(img/home-car.png);
+    }
+    #home-contact-img-alt {
+    	position: absolute;
+	    right: -160px;
+	    bottom:0;
+	    width: 400px;
+	    height: 280px;
+	    background: url(img/home-car-alt.png);
+	    
+    }
+    .home-contact-address,.home-contact-phone {
+    	background: url(img/icon-heart.png) no-repeat center 20px;
+    	text-align: center; 
+    	position: relative;
+    }
+    .home-contact-div {
+	    position: absolute;
+	    right: -10px;
+	    top:0;
+	    width: 2px;
+	    height: 100%;
+	    background: url(img/contact-div.png) no-repeat center center;
+    }
+    .home-contact-phone {
+	    background-image: url(img/icon-phone.png);
+    }
+    #home-contact p {
+	    margin-bottom: 0.6em;
+	    color: #414141;
+    }
+    .home-contact-title {
+	    font-size: 24px;
+	    margin-top:80px;
+    }
+    .home-contact-desc{
+	    font-size: 13px;
+	    line-height: 24px;
+    }
+    #home-contact .home-contact-foot {
+	    font-size: 16px;
+	    margin-bottom: 30px;
+    }
+    .home-contact-learnMore {
+	    padding-right: 15px;
+	    background: url(img/caret.png) no-repeat right center;
+    }
+    .banner {
+	    margin-bottom: 30px;
+	    z-index: 1;
+    }
+    #home-contact {
+	    margin-bottom: 65px;
+    }
+    .whychooseus>li {
+	    margin-left: 0;
+	    padding-left: 0;
+    }
+    .thebestof {
+    	display: block;
+	    height: 134px;
+	    overflow: hidden;
+	    position: relative;
+    }
+    .thebestof>img {
+	    position: absolute;
+	    left: 0;
+	    top:0;
+    }
+    .thebestof:hover>img, .thebestof:focus>img, .thebestof:active>img {
+	    top:-134px;
+    }
+    .whychooseus-sidebar>h3{
+	    border-left: 5px #36a6d8 solid;
+	    padding-left: 10px;
+	    background-color: #f6f6f6;
+	    font-size: 18px;
+	    color: #808080;
+	    width: 332px;
+	    line-height: 45px;
+	    margin-bottom: 5px;
+    }
+    #whychooseus-certified {
+	    background-color: #f6f6f6;
+	    width:347px;
+	    height: 260px;
+	    position: relative;
+    }
+    #certifiedPostureExercisePro,#trans,#impulseAdjusting {
+	    position: absolute;
+    }
+    #trans {
+	    left:20px;
+	    top:30px;
+    }
+    #impulseAdjusting {
+	    left:140px;
+	    top:30px;
+    }
+    #certifiedPostureExercisePro {
+	    left:165px;
+	    top:90px;
+    }
+    .tagline {
+	    background-color: #f6f6f6;
+	    margin-bottom: 30px;
+    }
+    .tagline h4 {
+	    background: none;
     }

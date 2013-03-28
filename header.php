@@ -17,6 +17,7 @@
 			<script type="text/javascript">/*@cc_on'abbr article aside audio canvas details figcaption figure footer header hgroup mark meter nav output progress section summary subline time video'.replace(/\w+/g,function(n){document.createElement(n)})@*/</script>
 			<![endif]-->
 		<script type="text/javascript">(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 		
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 
@@ -45,7 +46,6 @@
 		<div class="site-wrapper container"> 
 			<header class="row-fluid">
 							
-				<div class="row-fluid">
 					<div class="span12">
 						<div class="row-fluid header-content">
 							
@@ -72,7 +72,6 @@
 							
 						</div>
 					</div>
-				</div>
                 
 			</header>
 			<!-- end header  -->

@@ -4,50 +4,95 @@ Template Name: Home
 */
 ?><?php $t =& peTheme(); ?>
 <?php get_header(); ?>
-<?php get_template_part("tagline"); ?>
+
 <?php $content =& $t->content; ?>
 <?php $meta =& $content->meta(); ?>
 
 
 <section  class="row-fluid banner">
-	<?php $t->media->size($meta->gallery,940,350); ?>
-	<?php $t->slider->output(); ?>
-	<?php $t->media->size(); ?>
+<div id="home-slide-auto">
+<h1>Auto accident care</h1>
+<p>We are expert at chiropractic adjustments, massage therapy, rehabilitation and other pain relief techniques.<br>We will also assist you and help you with billing questions and insurance issues.</p>
+</div>
 </section>
+</div><!--container-->
+<!-- home contact -->
+<div id="home-contact">
+	<div class="container">
+	<div class="row-fluid">
+		<div class="span3 home-contact-address">
+			<p class="home-contact-title">
+			Bellevue
+			</p>
+			<p class="home-contact-desc">
+			1601 116th Ave NE, Suite 111<br>Bellevue, WA 98004
+			</p>
+			<p class="home-contact-foot">
+			<a class="home-contact-learnMore" href="/contact/">Learn More</a>
+			</p>
+			<div class="home-contact-div"></div>
+		</div>
+		<div class="span3 home-contact-address">
+			<p class="home-contact-title">
+			Seattle
+			</p>
+			<p class="home-contact-desc">
+			1601 116th Ave NE, Suite 111<br>Bellevue, WA 98004
+			</p>
+			<p class="home-contact-foot">
+			<a class="home-contact-learnMore" href="/contact/">Learn More</a>
+			</p>
+			<div class="home-contact-div"></div>
+		</div>
+		<div class="span3 home-contact-phone">
+			<p class="home-contact-title">
+			Call Us
+			</p>
+			<p class="home-contact-desc">
+			Start living happier<br>and healther today!
+			</p>
+			<p class="home-contact-foot">
+			(425)285-9304
+			</p>
+
+		</div>
+	</div>
+	<div id="home-contact-img-alt">
+	</div>
+	</div>
+	
+</div>
+<div class="site-wrapper container">
 
 <?php while ($content->looping()): ?>
 
 <div class="row-fluid">
 	
-	<!--statistic sidebar-->
-	<aside class="span5 stat-sidebar">
-		<?php $logos =& $meta->logos; ?>
+	<!--whychooseus sidebar-->
+	<aside class="span5 whychooseus-sidebar">
 
-		<?php if ($logos->title): ?>
-		<h3><?php echo $logos->title; ?></h3>
-		<?php endif; ?>
+		<h3>Why Choose Us?</h3>
 		
-		<ul class="stats">
-			<?php for ($i=1; $i<=4;$i++): ?>
-			<?php $logo = $logos->{"logo$i"}; ?>
-			<?php $link = $logos->{"link$i"}; ?>
-			<?php $text = $logos->{"text$i"}; ?>
-			<li>
-				<?php if ($logo && $link): ?>
-				<a href="<?php echo $link; ?>">
-					<?php endif; ?>
-					<img src="<?php echo $logos->{"logo$i"} ?>" alt="" />
-					<?php if ($link): ?>
+		<ul class="whychooseus">
+			
+			<li>				
+				<a href="http://best.king5.com/austin-d-hsu-d-c/biz/537977" class="thebestof">
+					<img src="<?php echo get_stylesheet_directory_uri() ?>/img/thebestofwashington.png" alt="the Best of Western Washington" />
 				</a>
-				<?php endif; ?>
-				<?php if ($text): ?>
-				<span><?php echo $text ?></span>
-				<?php endif; ?>
 			</li>
-			<?php endfor; ?>
+			<li>				
+				<a href="http://best.king5.com/austin-d-hsu-d-c/biz/537977" class="thebestof">
+					<img src="<?php echo get_stylesheet_directory_uri() ?>/img/thebestof425.png" alt="the Best of 425 Washington" />
+				</a>
+			</li>
+			<li id="whychooseus-certified">
+				<img src="<?php echo get_stylesheet_directory_uri() ?>/img/trans200_hi.gif" id="trans" />
+				<img src="<?php echo get_stylesheet_directory_uri() ?>/img/certifiedpostureexercisepro.png" id="certifiedPostureExercisePro" />
+				<img src="<?php echo get_stylesheet_directory_uri() ?>/img/impulseadjusting.png" id="impulseAdjusting" />
+			</li>
 		</ul>
 	</aside>
-	<!--end statistic sidebar-->
+	<!--end whychooseus sidebar-->
 		
 	<!--main content-->
 	<section class="span7 home-content">
@@ -72,18 +117,13 @@ Template Name: Home
 		<div class="row-fluid">
 			
 			<div class="inner-spacer-left">
-				<!--latest work-->
+				<!--office-->
 				<div class="span12 lower">
 					<h3>
-						<?php echo $projects->title; ?>
-						<?php if (!empty($projects->label) && !empty($projects->link) ): ?>
-						<a href="<?php echo $projects->link; ?>">
-							<span class="hand-written"><?php echo $projects->label; ?></span>
-						</a>
-						<?php endif; ?>
+						Our Office
 					</h3>
 
-					<?php if ($content->customLoop("project",-1,null,array("post__in" => $projects->items),false)): ?>
+					<?php if ($content->customLoop("project",-1,null,null,false)): ?>
 					<?php while ($content->looping(2)): ?>
 					<?php $content->beginRow('<div class="row-fluid">') ?>
 					<div class="span6 feat-<?php echo $content->idx() % 2 ? "right" : "left"; ?>">
@@ -103,7 +143,7 @@ Template Name: Home
 					
 
 				</div>
-				<!--end latest work-->
+				<!--end office-->
 			</div>			
 		</div>
 		<?php endif; ?>

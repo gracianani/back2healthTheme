@@ -8,13 +8,15 @@
 <?php if ($show): ?>
 <?php $content = empty($meta->tagline->tagline) ? $t->options->get("taglineContent") : $meta->tagline->tagline; ?>
 
+</div><!-- end of container-->
 <!-- tagline-->
-<section class="row-fluid tagline <?php echo $borderClass; ?>">
-	
-	<div class="span12">
+<section class="tagline <?php echo $borderClass; ?>">
+
+	<div class="container">
 		<?php $t->shortcode->run($content); ?>
 	</div>
 	
 </section>
 <!--end tagline-->
+<div class="container">
 <?php endif; ?>

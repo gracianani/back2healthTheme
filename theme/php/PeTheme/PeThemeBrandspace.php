@@ -889,7 +889,7 @@ Contact
 		$homeProjectsMbox =
 			array(
 				  "type" =>"",
-				  "title" =>__pe("Latest Work"),
+				  "title" =>__pe("Our Office"),
 				  "priority" => "core",
 				  "where" => 
 				  array(
@@ -901,7 +901,7 @@ Contact
 						array(
 							  "label"=>__pe("Title"),
 							  "type"=>"Text",
-							  "default"=>__pe("Latest Work")
+							  "default"=>__pe("Our Office")
 							  ),
 						"label" => 	
 						array(
@@ -1021,29 +1021,36 @@ Quotation Request Details
 							  "sortable" => true,
 							  "unique" => false,
 							  "default" => array(
-												 "Template Customisation",
-												 "PSD to HTML",
-												 "Wordpress Theme",
-												 "Wordpress Installation",
-												 "Flash Website",
-												 "PSD Website Layout Design",
-												 "CSS and HTML Website Development"
+												 "SpineForce",
+												 "Auto Accident Care",
+												 "Spinal Decompression",
+												 "Others"
 												 )
 							  ),
-						"budgets" => 
+						"timeofday" => 
 						array(
-							  "label"=>__pe("Budget Options"),
+							  "label"=>__pe("Time of Day"),
 							  "type"=>"Links",
-							  "description" => __pe("Add one or more budget option."),
+							  "description" => __pe("Add one or more time option."),
 							  "sortable" => true,
 							  "unique" => false,
 							  "default" => array(
-												 "< $500",
-												 "< $2000",
-												 "> $2000",
-												 "Unsure"
+												 "am",
+												 "pm"
 												 )
 							  ),
+						"haveseenbefore" =>
+						array(
+							  "label"=>__pe("Have You Seen Here Before"),
+							  "type"=>"Links",
+							  "description" => __pe("Add one or more option."),
+							  "sortable" => false,
+							  "unique" => false,
+							  "default" => array(
+												 "Yes",
+												 "No"
+												 )
+						),
 						"messageBox" => 
 						array(
 							  "label"=>__pe("Message Box"),

@@ -22,7 +22,7 @@
 					<div class="controls">
 						<div class="input-append">
 							<input type="text" name="email"  />
-							<button class="btn btn-info" type="submit"><?php e__pe("Go!"); ?></button>
+							<button class="btn btn-info" type="submit"><?php e__pe("Subscribe"); ?></button>
 						</div>
 					</div>
 				</div>
@@ -64,14 +64,10 @@
 			</div>
 		</div>
 	     
-		<!--btm color bar-->
-		<div class="row-fluid btm-bar">
-			<div class="span5"></div>
-			<div class="span7"></div>
-		</div>
 	     
 	</footer>
 	<!--end footer-->
 	<?php $t->footer->wp_footer(); ?>
     </body>
+    <script  src="<?php echo get_stylesheet_directory_uri() ?>/js/main.js"></script>
 </html>
